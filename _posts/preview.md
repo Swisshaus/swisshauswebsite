@@ -4,8 +4,8 @@ excerpt: "The home blends traditional alpine elements—like the pitched roof, w
 coverImage: "/assets/blog/preview/cover.jpeg"
 date: "2025-03-16T05:35:07.322Z"
 author:
-  name: Mike Arnold
-  picture: "/assets/blog/authors/joe.jpeg"
+  name: K Arnold
+  picture: "/assets/blog/authors/kevin.png"
 ogImage:
   url: "/assets/blog/preview/cover.jpeg"
 ---

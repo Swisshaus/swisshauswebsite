@@ -5,7 +5,7 @@ coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2025-03-16T05:35:07.322Z"
 author:
   name: K Arnold
-  picture: "/assets/blog/authors/jj.jpeg"
+  picture: "/assets/blog/authors/kevin.png"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
