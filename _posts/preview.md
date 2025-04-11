@@ -1,18 +1,18 @@
 ---
-title: "Preview Mode for Static Generation"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/preview/cover.jpg"
-date: "2020-03-16T05:35:07.322Z"
+title: "Custom Home - Whitefish, MT"
+excerpt: "The home blends traditional alpine elements—like the pitched roof, wood accents, and stone fireplace—with modern features such as expansive windows, open floor plans, and minimalist interiors. The use of natural materials (wood, stone) ties it to its environment, while the clean lines and neutral tones give it a contemporary edge."
+coverImage: "/assets/blog/preview/cover.jpeg"
+date: "2025-03-16T05:35:07.322Z"
 author:
-  name: Joe Haddad
+  name: Mike Arnold
   picture: "/assets/blog/authors/joe.jpeg"
 ogImage:
-  url: "/assets/blog/preview/cover.jpg"
+  url: "/assets/blog/preview/cover.jpeg"
 ---
+## 3,400 Sq Ft Alpine Modern
+The home blends traditional alpine elements—like the pitched roof, wood accents, and stone fireplace—with modern features such as expansive windows, open floor plans, and minimalist interiors. The use of natural materials (wood, stone) ties it to its environment, while the clean lines and neutral tones give it a contemporary edge.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
-
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+![Whitefish Custom Home Front of House Closeup](/assets/blog/preview/alpine32.png)
 
 ## Lorem Ipsum
 
