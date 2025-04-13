@@ -1,10 +1,7 @@
 .switch {
   all: unset;
-  position: absolute;
-  right: 20px;
-  top: 35px;
-  display: inline-block;
-  color: currentColor;
+  display: inline-flex;
+  color: white;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -12,6 +9,8 @@
   height: var(--size);
   width: var(--size);
   transition: all 0.3s ease-in-out 0s !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .moonIcon {

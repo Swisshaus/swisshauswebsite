@@ -62,8 +62,9 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
-        <Navbar />
-        <ThemeSwitcher />
+        <div className="fixed top-0 left-0 right-0 z-50">
+          <Navbar />
+        </div>
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
