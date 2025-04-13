@@ -3,8 +3,11 @@ import Link from "next/link";
 
 export function Navbar() {
   return (
-    <section className="h-16 bg-background/60 sticky top-0 border-b px-8 backdrop-blur flex items-center justify-between flex-col md:flex-row flex items-center md:justify-between mt-2 mb-16 md:mb-12">
-     
+    
+
+
+    <section className="h-16 bg-background/60 sticky top-0 border-b px-8 backdrop-blur justify-between flex-col md:flex-row flex items-center md:justify-between mt-2 mb-16 md:mb-12">
+
 
       <h1 className="float-left text-5xl md:text-3xl font-bold tracking-tighter leading-tight md:pr-8">
                 {/* Logo */}
