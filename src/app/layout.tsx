@@ -8,6 +8,7 @@ import { ThemeSwitcher } from "./components/theme-switcher";
 import "./globals.css";
 import { Navbar } from "./components/navbar";
 import SiteHeader from "./components/SiteHeader/SiteHeader";
+import { ThemeContextProvider } from "./contexts/ThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -62,11 +63,11 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
       >
-        <div className="fixed top-0 left-0 right-0 z-50">
+        <ThemeContextProvider>
           <Navbar />
-        </div>
-        <div className="min-h-screen">{children}</div>
-        <Footer />
+          <div className="min-h-screen">{children}</div>
+          <Footer />
+        </ThemeContextProvider>
       </body>
     </html>
   );

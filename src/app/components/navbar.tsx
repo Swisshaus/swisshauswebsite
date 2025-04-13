@@ -6,10 +6,12 @@ import { useState } from "react";
 import HamburgerIcon from "./HamburgerIcon";
 import MobileMenu from "./MobileMenu";
 import { ThemeSwitcher } from "./theme-switcher";
+import { useThemeContext } from "../contexts/ThemeContext";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const { textColor, bgColor } = useThemeContext();
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -20,28 +22,36 @@ export function Navbar() {
 
   return (
     <>
-      <section className="h-16 bg-background/30 px-8 backdrop-blur-sm justify-between flex items-center">
+      <div className={`fixed top-0 left-0 w-full z-50 ${bgColor} px-8 backdrop-blur-sm flex items-center justify-between h-16 transition-all duration-300`}>
         <h1 className="float-left text-5xl md:text-3xl font-bold tracking-tighter leading-tight md:pr-8">
-          {/* Logo */}
-          <Link href="/" className="hover:underline float-start">
-            <svg width="30" height="30" viewBox="0 0 172 184" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g id="Frame 1">
-                <g id="cross">
-                  <rect id="vert" x="62" y="23" width="47" height="138" fill="#FF0000" />
-                  <rect id="horiz" x="17" y="115" width="47" height="138" transform="rotate(-90 17 115)" fill="#FF0000" />
+          {/* Logo with text wrapped in a flex container for alignment */}
+          <div className="flex items-center gap-2 group">
+            <Link href="/" className="hover:underline float-start relative overflow-hidden">
+              <svg 
+                width="30" 
+                height="30" 
+                viewBox="0 0 172 184" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                className="transform transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-3"
+              >
+                <g id="Frame 1">
+                  <g id="cross">
+                    <rect id="vert" x="62" y="23" width="47" height="138" fill="#FF0000" />
+                    <rect id="horiz" x="17" y="115" width="47" height="138" transform="rotate(-90 17 115)" fill="#FF0000" />
+                  </g>
                 </g>
-              </g>
-            </svg>
-          </Link>
-          <Link href="/" className="hover:underline float-start text-white">swisshaus</Link>
+              </svg>
+            </Link>
+            <Link href="/" className={`hover:underline ${textColor}`}>swisshaus</Link>
+          </div>
         </h1>
         
         <div className="hidden md:block text-center md:text-left text-lg md:pl-8">
           <ul className='flex w-full justify-end items-center space-x-8'>
-            <li><Link href="/" className="hover:underline text-white font-medium">Home</Link></li>
-            <li><Link href="/about" className="hover:underline text-white font-medium">About</Link></li>
-            <li><Link href="/projects" className="hover:underline text-white font-medium">Projects</Link></li>
-            <li><Link href="/contact" className="hover:underline text-white font-medium">Contact</Link></li>
+            <li><Link href="/about" className={`hover:underline ${textColor} font-medium`}>About</Link></li>
+            <li><Link href="/projects" className={`hover:underline ${textColor} font-medium`}>Projects</Link></li>
+            <li><Link href="/contact" className={`hover:underline ${textColor} font-medium`}>Contact</Link></li>
             <li className="flex items-center">
               <ThemeSwitcher />
             </li>
@@ -54,7 +64,7 @@ export function Navbar() {
           </div>
           <HamburgerIcon onClick={toggleMenu} />
         </div>
-      </section>
+      </div>
 
       <MobileMenu isOpen={isMenuOpen} onClose={closeMenu} />
     </>

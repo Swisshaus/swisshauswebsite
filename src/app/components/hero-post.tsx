@@ -25,6 +25,7 @@ export function HeroPost({
   return (
     <section className="relative w-full h-[70vh] mb-16">
       <div className="absolute inset-0">
+      <Link href={`/posts/${slug}`} className="hover:underline">
         <Image
           src={coverImage}
           alt={`Cover Image for ${title}`}
@@ -32,6 +33,7 @@ export function HeroPost({
           priority
           className="object-cover"
         />
+        </Link>
       </div>
       <div className="absolute bottom-0 right-0 max-w-lg p-8 bg-black/50 text-white">
         <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
