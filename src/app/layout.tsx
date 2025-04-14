@@ -3,11 +3,9 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
-import { ThemeSwitcher } from "./components/theme-switcher";
 
 import "./globals.css";
 import { Navbar } from "./components/navbar";
-import SiteHeader from "./components/SiteHeader/SiteHeader";
 import { ThemeContextProvider } from "./contexts/ThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
