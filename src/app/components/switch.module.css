@@ -1,19 +1,29 @@
 .switch {
   all: unset;
-  position: absolute;
-  right: 20px;
-  top: 35px;
-  display: inline-block;
-  color: currentColor;
+  display: inline-flex;
   border-radius: 50%;
-  border: 1px dashed currentColor;
+  border: none;
   cursor: pointer;
   --size: 24px;
   height: var(--size);
   width: var(--size);
   transition: all 0.3s ease-in-out 0s !important;
+  align-items: center;
+  justify-content: center;
 }
 
+.themeIcon {
+  transition: transform 0.3s ease;
+}
+
+.switch:hover .themeIcon {
+  transform: rotate(15deg);
+}
+
+.switch.clicked .themeIcon {
+  transform: rotate(30deg);
+}
+/* 
 [data-mode="system"] .switch::after {
   position: absolute;
   height: 100%;
@@ -36,11 +46,12 @@
 
 [data-mode="dark"] .switch {
   box-shadow: calc(var(--size) / 4) calc(var(--size) / -4) calc(var(--size) / 8)
-    inset #fff;
+    inset #ffffff;
   border: none;
   background: transparent;
   animation: n linear 0.5s;
-}
+  
+} */
 
 @keyframes n {
   40% {
