@@ -3,7 +3,6 @@ import CoverImage from "@/app/components/cover-image";
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
-import Image from "next/image";
 
 type Props = {
   title: string;
@@ -23,29 +22,25 @@ export function HeroPost({
   slug,
 }: Props) {
   return (
-    <section className="relative w-full h-[70vh] mb-16">
-      <div className="absolute inset-0">
-      <Link href={`/posts/${slug}`} className="hover:underline">
-        <Image
-          src={coverImage}
-          alt={`Cover Image for ${title}`}
-          fill
-          priority
-          className="object-cover"
-        />
-        </Link>
+    <section>
+      <div className="mb-8 md:mb-16">
+        <CoverImage title={title} src={coverImage} slug={slug} />
       </div>
-      <div className="absolute bottom-0 right-0 max-w-lg p-8 bg-black/50 text-white">
-        <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
-          <Link href={`/posts/${slug}`} className="hover:underline">
-            {title}
-          </Link>
-        </h3>
-        <div className="mb-4 text-lg">
-          <DateFormatter dateString={date} />
+      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
+        <div>
+          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
+            <Link href={`/posts/${slug}`} className="hover:underline">
+              {title}
+            </Link>
+          </h3>
+          <div className="mb-4 md:mb-0 text-lg">
+            <DateFormatter dateString={date} />
+          </div>
         </div>
-        <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-        <Avatar name={author.name} picture={author.picture} />
+        <div>
+          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+          <Avatar name={author.name} picture={author.picture} />
+        </div>
       </div>
     </section>
   );
