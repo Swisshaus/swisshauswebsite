@@ -4,17 +4,8 @@ import { Intro } from "@/app/components/intro";
 import { CategoryStories } from "@/app/components/category-stories";
 import { getAllPosts } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
-import { Metadata } from "next";
 
-interface CategoryPageProps {
-  params: {
-    category: string;
-  };
-}
-
-export default function CategoryPage({
-  params,
-}: CategoryPageProps) {
+export default function CategoryPage({ params }) {
   const category = decodeURIComponent(params.category);
   const allPosts = getAllPosts(category);
   const heroPost = allPosts[0];
@@ -43,9 +34,7 @@ export default function CategoryPage({
   );
 }
 
-export function generateMetadata({
-  params,
-}: CategoryPageProps): Metadata {
+export function generateMetadata({ params }) {
   const category = decodeURIComponent(params.category);
   return {
     title: `${category} Posts | ${CMS_NAME}`,

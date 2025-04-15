@@ -3,9 +3,8 @@ import Link from 'next/link';
 import Container from "@/app/components/container";
 import { CMS_NAME } from "@/lib/constants";
 import { getAllPosts } from "@/lib/api";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: `Our Projects | ${CMS_NAME}`,
   description: 'Explore custom homes built by Swisshaus Design & Build in Kalispell, MT and the Flathead Valley.',
 };

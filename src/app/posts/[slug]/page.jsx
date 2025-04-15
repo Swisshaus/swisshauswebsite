@@ -1,21 +1,13 @@
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
-import Alert from "@/app/components/alert";
 import Container from "@/app/components/container";
 import Header from "@/app/components/header";
 import { PostBody } from "@/app/components/post-body";
 import { PostHeader } from "@/app/components/post-header";
 
-interface PostPageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default async function Post({ params }: PostPageProps) {
+export default async function Post({ params }) {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -43,7 +35,7 @@ export default async function Post({ params }: PostPageProps) {
   );
 }
 
-export function generateMetadata({ params }: PostPageProps): Metadata {
+export function generateMetadata({ params }) {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
