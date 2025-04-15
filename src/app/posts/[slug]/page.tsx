@@ -9,8 +9,7 @@ import Header from "@/app/components/header";
 import { PostBody } from "@/app/components/post-body";
 import { PostHeader } from "@/app/components/post-header";
 
-export default async function Post(props: Params) {
-  const params = await props.params;
+export default async function Post({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -38,14 +37,14 @@ export default async function Post(props: Params) {
   );
 }
 
-type Params = {
-  params: Promise<{
+type Props = {
+  params: {
     slug: string;
-  }>;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata(props: Params): Promise<Metadata> {
-  const params = await props.params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
