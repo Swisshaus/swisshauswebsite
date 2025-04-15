@@ -66,6 +66,7 @@ export default function Projects() {
           ))}
         </div>
         
+        
         <div className="text-center my-16">
           <p className="text-xl mb-6">Interested in working with us on your custom home?</p>
           <a 

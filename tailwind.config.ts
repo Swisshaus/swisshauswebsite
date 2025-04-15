@@ -20,6 +20,8 @@ const config: Config = {
         "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
+        "dark-bg": "hsl(210deg 15% 6%)",
+        "dark-text": "hsl(210deg 10% 90%)",
       },
       spacing: {
         28: "7rem",

@@ -91,7 +91,7 @@ const Switch = () => {
   const showSun = mode === "dark";
   
   // Get the text color from context to match the navbar text
-  const iconColor = textColor === 'text-white' ? 'stroke-white' : 'stroke-black';
+  const iconColor = textColor === 'text-white' || textColor === 'text-dark-text' ? 'stroke-white' : 'stroke-black';
 
   return (
     <button

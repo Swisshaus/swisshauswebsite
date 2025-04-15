@@ -5,7 +5,7 @@ export function Intro() {
   return (
     
     <section className="text-4xl mb-2 font-bold">
-      <h1>Design & Build</h1>
+      <h1></h1>
       
       
     </section>

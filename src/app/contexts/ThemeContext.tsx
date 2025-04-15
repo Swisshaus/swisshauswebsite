@@ -89,11 +89,13 @@ export function ThemeContextProvider({ children }: ThemeContextProviderProps) {
   }, []);
   
   // Determine text color based on context
-  const textColor = (isHomePage && !scrolled) || isDarkMode ? 'text-white' : 'text-black';
+  const textColor = (isHomePage && !scrolled) 
+    ? 'text-white' 
+    : isDarkMode ? 'text-dark-text' : 'text-black';
   
   // Adjust background based on scroll position
   const bgColor = scrolled 
-    ? isDarkMode ? 'bg-slate-900/80' : 'bg-white/80' 
+    ? isDarkMode ? 'bg-dark-bg/80' : 'bg-white/80' 
     : 'bg-background/30';
   
   // Create the context value object

@@ -4,7 +4,7 @@ excerpt: "This large custom home is the king of the hill it was built on. The ho
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
 date: "2025-03-16T05:35:07.322Z"
 author:
-  name: K Arnold
+  name: Kevin Arnold
   picture: "/assets/blog/authors/kevin.png"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
