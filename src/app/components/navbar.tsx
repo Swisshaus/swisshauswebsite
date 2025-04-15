@@ -49,9 +49,9 @@ export function Navbar() {
         
         <div className="hidden md:block text-center md:text-left text-lg md:pl-8">
           <ul className='flex w-full justify-end items-center space-x-8'>
-            <li><Link href="/about" className={`hover:underline ${textColor} font-medium`}>About</Link></li>
-            <li><Link href="/projects" className={`hover:underline ${textColor} font-medium`}>Projects</Link></li>
-            <li><Link href="/contact" className={`hover:underline ${textColor} font-medium`}>Contact</Link></li>
+            <li><Link href="/about" className={`hover:underline ${textColor} font-medium`} aria-label="About Swisshaus and our team">About Us</Link></li>
+            <li><Link href="/projects" className={`hover:underline ${textColor} font-medium`} aria-label="View our custom home projects in Kalispell, MT">Our Projects</Link></li>
+            <li><Link href="/contact" className={`hover:underline ${textColor} font-medium`} aria-label="Contact Swisshaus for your custom home">Contact Us</Link></li>
             <li className="flex items-center">
               <ThemeSwitcher />
             </li>

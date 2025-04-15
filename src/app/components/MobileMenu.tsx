@@ -31,6 +31,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 href="/" 
                 className="text-2xl font-medium text-white hover:text-red-500 transition-colors"
                 onClick={onClose}
+                aria-label="Go to Swisshaus home page"
               >
                 Home
               </Link>
@@ -40,8 +41,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 href="/about" 
                 className="text-2xl font-medium text-white hover:text-red-500 transition-colors"
                 onClick={onClose}
+                aria-label="Learn about Swisshaus and our team"
               >
-                About
+                About Us
               </Link>
             </li>
             <li>
@@ -49,8 +51,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 href="/projects" 
                 className="text-2xl font-medium text-white hover:text-red-500 transition-colors"
                 onClick={onClose}
+                aria-label="View our custom home projects in Kalispell, MT"
               >
-                Projects
+                Our Projects
               </Link>
             </li>
             <li>
@@ -58,8 +61,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 href="/contact" 
                 className="text-2xl font-medium text-white hover:text-red-500 transition-colors"
                 onClick={onClose}
+                aria-label="Contact Swisshaus for your custom home"
               >
-                Contact
+                Contact Us
               </Link>
             </li>
           </ul>
