@@ -6,13 +6,14 @@ import { getAllPosts } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import { Metadata } from "next";
 
-type Props = {
+type PageProps = {
   params: {
     category: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default function CategoryPage({ params }: Props) {
+export default function CategoryPage({ params }: PageProps) {
   const category = decodeURIComponent(params.category);
   const allPosts = getAllPosts(category);
   const heroPost = allPosts[0];
@@ -41,7 +42,7 @@ export default function CategoryPage({ params }: Props) {
   );
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const category = decodeURIComponent(params.category);
   return {
     title: `${category} Posts | ${CMS_NAME}`,

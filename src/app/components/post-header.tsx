@@ -17,7 +17,7 @@ export function PostHeader({ title, coverImage, date, author, category = "Genera
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="mb-6 text-base md:text-lg italic text-left md:text-center">
+      <div className="mb-6 text-sm md:text-lg italic text-left md:text-center">
           Filed under <Link href={`/category/${encodeURIComponent(category)}`} className="hover:underline font-bold text-red-600">{category}</Link> on <DateFormatter dateString={date} />
         </div>
       <div className="hidden md:block md:mb-12">

@@ -2,6 +2,7 @@
 import styles from "./switch.module.css";
 import { memo, useEffect, useState } from "react";
 import { useThemeContext } from "../contexts/ThemeContext";
+import useSound from 'use-sound';
 
 declare global {
   var updateDOM: () => void;
@@ -59,6 +60,10 @@ const Switch = () => {
   );
   const [isAnimating, setIsAnimating] = useState(false);
   const { textColor } = useThemeContext();
+  
+  // Load sound effects for light/dark mode toggle
+  const [playToggleOn] = useSound('/sounds/switch-on.mp3', { volume: 0.5 });
+  const [playToggleOff] = useSound('/sounds/switch-off.mp3', { volume: 0.5 });
 
   useEffect(() => {
     // Store global functions to local variables to avoid any interference
@@ -79,7 +84,15 @@ const Switch = () => {
   const handleModeSwitch = () => {
     setIsAnimating(true);
     const index = modes.indexOf(mode);
-    setMode(modes[(index + 1) % modes.length]);
+    const newMode = modes[(index + 1) % modes.length];
+    setMode(newMode);
+    
+    // Play the appropriate sound based on which mode we're switching to
+    if (newMode === 'light') {
+      playToggleOn();
+    } else {
+      playToggleOff();
+    }
     
     // Reset animation flag after animation completes
     setTimeout(() => setIsAnimating(false), 500);
