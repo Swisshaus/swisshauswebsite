@@ -11,6 +11,7 @@ type Props = {
   excerpt: string;
   author: Author;
   slug: string;
+  category?: string;
 };
 
 export function HeroPost({
@@ -20,6 +21,7 @@ export function HeroPost({
   excerpt,
   author,
   slug,
+  category = "General",
 }: Props) {
   return (
     <section>
@@ -33,9 +35,6 @@ export function HeroPost({
               {title}
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
-          </div>
         </div>
         <div>
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>

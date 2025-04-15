@@ -29,6 +29,7 @@ export default async function Post(props: Params) {
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}
+            category={post.category}
           />
           <PostBody content={content} />
         </article>
@@ -51,7 +52,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title} | Swisshaus blog with ${CMS_NAME}`;
 
   return {
     title,

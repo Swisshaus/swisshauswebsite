@@ -46,7 +46,7 @@ export default function About() {
         </div>
 
         {/* Meet the Team */}
-        <div className="mb-20">
+        <div id="team" className="mb-20">
           <h2 className="text-4xl font-bold text-center mb-16">Meet Our Team</h2>
           
           {/* Team Profiles */}

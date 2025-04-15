@@ -11,8 +11,8 @@ export default function HamburgerIcon({ onClick }: HamburgerIconProps) {
   const { textColor, isDarkMode, isHomePage, scrolled } = useThemeContext();
   
   // Determine bar color based on text color
-  // Use white bars for white text, black bars for black text
-  const barColor = textColor === 'text-white' ? 'bg-white' : 'bg-black';
+  // Use white bars for white text or dark mode text, black bars for black text
+  const barColor = textColor === 'text-white' || textColor === 'text-dark-text' ? 'bg-white' : 'bg-black';
 
   return (
     <button 

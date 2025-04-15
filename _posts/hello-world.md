@@ -3,6 +3,7 @@ title: "Porter Ranch"
 excerpt: "Our newest subdivision, 7 lots available. 5 Acre - Custom Home neighborhood"
 coverImage: "/assets/blog/hello-world/cover.jpg"
 date: "2025-03-16T05:35:07.322Z"
+category: "Home-Complete"
 author:
   name: Kevin Arnold
   picture: "/assets/blog/authors/kevin.png"
