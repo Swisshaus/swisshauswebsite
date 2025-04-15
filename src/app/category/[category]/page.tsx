@@ -6,19 +6,15 @@ import { getAllPosts } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import { Metadata } from "next";
 
-// For generateMetadata
-type Props = {
+interface CategoryPageProps {
   params: {
     category: string;
   };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
+}
 
-export default async function CategoryPage({
+export default function CategoryPage({
   params,
-}: {
-  params: { category: string };
-}) {
+}: CategoryPageProps) {
   const category = decodeURIComponent(params.category);
   const allPosts = getAllPosts(category);
   const heroPost = allPosts[0];
@@ -28,7 +24,7 @@ export default async function CategoryPage({
     <Container>
       <Intro />
       <div className="py-28 flex flex-col md:flex-row md:justify-between md:items-center">
-               <h2 className="text-3xl font-bold tracking-tight md:text-5xl mb-4 md:mb-0">{category}</h2>
+        <h2 className="text-3xl font-bold tracking-tight md:text-5xl mb-4 md:mb-0">{category}</h2>
         <p className="text-lg text-gray-600 dark:text-dark-text/80">{allPosts.length} Articles</p>
       </div>
       {heroPost && (
@@ -47,7 +43,9 @@ export default async function CategoryPage({
   );
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export function generateMetadata({
+  params,
+}: CategoryPageProps): Metadata {
   const category = decodeURIComponent(params.category);
   return {
     title: `${category} Posts | ${CMS_NAME}`,
@@ -55,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const allPosts = getAllPosts();
   const categories = new Set(allPosts.map((post) => post.category || "General"));
   

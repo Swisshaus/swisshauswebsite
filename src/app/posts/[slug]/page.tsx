@@ -9,7 +9,13 @@ import Header from "@/app/components/header";
 import { PostBody } from "@/app/components/post-body";
 import { PostHeader } from "@/app/components/post-header";
 
-export default async function Post({ params }: { params: { slug: string } }) {
+interface PostPageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function Post({ params }: PostPageProps) {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -37,14 +43,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   );
 }
 
-type Props = {
-  params: {
-    slug: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export function generateMetadata({ params }: PostPageProps): Metadata {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -62,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const posts = getAllPosts();
 
   return posts.map((post) => ({
