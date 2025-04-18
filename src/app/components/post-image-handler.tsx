@@ -26,11 +26,14 @@ export default function PostImageHandler() {
       ];
       
       // Try each selector until we find images
-      let blogImages: HTMLImageElement[] = [];
+      let blogImages: Element[] = [];
       for (const selector of selectors) {
         blogImages = selector();
         if (blogImages.length > 0) break;
       }
+      
+      // Cast to HTMLImageElement[] for type safety
+      const typedImages = blogImages as HTMLImageElement[];
       
       // Exclude patterns for images that aren't part of the blog content
       const excludePatterns = [
@@ -43,7 +46,7 @@ export default function PostImageHandler() {
       ];
       
       // Filter and process the images
-      return blogImages
+      return typedImages
         .filter(img => !excludePatterns.some(pattern => pattern(img))) // Exclude avatar images
         .map(img => img.src)
         .filter(Boolean) // Remove any undefined/empty values
