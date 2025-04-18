@@ -2,6 +2,7 @@
 
 import Container from "@/app/components/container";
 import { useState } from "react";
+import React from "react";
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -14,7 +15,7 @@ export default function Contact() {
   const [status, setStatus] = useState({ message: '', isError: false });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormState({
       ...formState,
@@ -23,7 +24,7 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus({ message: '', isError: false });
