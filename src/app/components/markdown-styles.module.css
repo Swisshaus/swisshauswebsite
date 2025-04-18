@@ -16,3 +16,14 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+.markdown img {
+  @apply my-6 rounded-md shadow-md cursor-pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.markdown img:hover {
+  opacity: 0.9;
+  transform: scale(1.01);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

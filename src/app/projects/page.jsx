@@ -39,7 +39,6 @@ export default function Projects() {
                   />
                 </div>
                 <h2 className="text-2xl font-bold">{project.title}</h2>
-                <p className="text-red-600 mb-2">{project.category || "Home-Complete"}</p>
                 <p>{project.excerpt}</p>
               </Link>
             ))

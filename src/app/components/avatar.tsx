@@ -11,7 +11,7 @@ const Avatar = ({ name, picture }: Props) => {
       <Link href="/about#team" aria-label={`Visit ${name}'s profile`}>
         <img 
           src={picture} 
-          className="w-12 h-12 rounded-full mr-4 hover:opacity-80 transition-opacity" 
+          className="w-12 h-12 rounded-full mr-4 hover:opacity-80 transition-opacity avatar-image" 
           alt={name} 
         />
       </Link>

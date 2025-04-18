@@ -7,6 +7,9 @@ import cn from "classnames";
 import "./globals.css";
 import { Navbar } from "./components/navbar";
 import { ThemeContextProvider } from "./contexts/ThemeContext";
+import { LightboxProvider } from "./contexts/LightboxContext";
+import Lightbox from "./components/lightbox";
+import PostImageHandler from "./components/post-image-handler";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,9 +69,13 @@ export default function RootLayout({
         className={cn(inter.className, "dark:bg-dark-bg dark:text-dark-text")}
       >
         <ThemeContextProvider>
-          <Navbar />
-          <div className="min-h-screen">{children}</div>
-          <Footer />
+          <LightboxProvider>
+            <Navbar />
+            <div className="min-h-screen">{children}</div>
+            <Footer />
+            <PostImageHandler />
+            <Lightbox />
+          </LightboxProvider>
         </ThemeContextProvider>
       </body>
     </html>

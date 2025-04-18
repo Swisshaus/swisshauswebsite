@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",
