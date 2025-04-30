@@ -6,12 +6,13 @@ import { getAllPosts } from "@/lib/api";
 import { CMS_NAME } from "@/lib/constants";
 import { Metadata } from "next";
 
-export default function CategoryPage({ 
+export default async function CategoryPage({ 
   params,
 }: { 
-  params: { category: string } 
+  params: Promise<{ category: string }> 
 }) {
-  const category = decodeURIComponent(params.category);
+  const resolvedParams = await params;
+  const category = decodeURIComponent(resolvedParams.category);
   const allPosts = getAllPosts(category);
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
@@ -39,12 +40,13 @@ export default function CategoryPage({
   );
 }
 
-export function generateMetadata({ 
+export async function generateMetadata({ 
   params,
 }: { 
-  params: { category: string } 
-}): Metadata {
-  const category = decodeURIComponent(params.category);
+  params: Promise<{ category: string }> 
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const category = decodeURIComponent(resolvedParams.category);
   return {
     title: `${category} Posts | ${CMS_NAME}`,
     description: `Posts in the ${category} category | ${CMS_NAME}`,

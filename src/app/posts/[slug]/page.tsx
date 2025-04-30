@@ -13,9 +13,10 @@ import { Metadata } from "next";
 export default async function Post({ 
   params,
 }: { 
-  params: { slug: string } 
+  params: Promise<{ slug: string }> 
 }) {
-  const post = getPostBySlug(params.slug);
+  const resolvedParams = await params;
+  const post = getPostBySlug(resolvedParams.slug);
 
   if (!post) {
     return notFound();
@@ -76,12 +77,13 @@ export default async function Post({
   );
 }
 
-export function generateMetadata({ 
+export async function generateMetadata({ 
   params,
 }: { 
-  params: { slug: string } 
-}): Metadata {
-  const post = getPostBySlug(params.slug);
+  params: Promise<{ slug: string }> 
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const post = getPostBySlug(resolvedParams.slug);
 
   if (!post) {
     return notFound();
