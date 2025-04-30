@@ -24,6 +24,7 @@
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "shiki": "^3.2.2",
+    "supports-color": "^10.0.0",
     "unist-util-visit": "^5.0.0",
     "use-sound": "^5.0.0"
   },
