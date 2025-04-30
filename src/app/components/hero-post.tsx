@@ -3,6 +3,7 @@ import CoverImage from "@/app/components/cover-image";
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
+import Image from "next/image";
 
 type Props = {
   title: string;
@@ -24,23 +25,70 @@ export function HeroPost({
   category = "General",
 }: Props) {
   return (
-    <section>
-      <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} slug={slug} />
-      </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
-            <Link href={`/posts/${slug}`} className="hover:underline">
-              {title}
-            </Link>
-          </h3>
+    <section className="max-w-[1200px] mx-auto px-5">
+      <h2 className="mb-8 text-5xl md:text-2xl font-bold tracking-tighter leading-tight">
+        Some of our past projects
+        <hr className="border-gray-500 dark:border-gray-700 my-3" />
+      </h2>
+      
+      <Link href={`/posts/${slug}`} className="block group">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:shadow-lg group-hover:-translate-y-1 mb-8">
+          <div className="h-[60vh] relative overflow-hidden">
+            <Image
+              src={coverImage}
+              alt={`Cover Image for ${title}`}
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
+          
+          <div className="p-6">
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-3xl leading-snug font-semibold">
+                {title}
+              </h3>
+              <div className="relative transition-all duration-300 group-hover:bg-red-600 group-hover:rounded-lg p-1 -m-1 transform group-hover:translate-x-1 group-hover:rotate-3">
+                <svg 
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 172 184" 
+                  fill="none" 
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="transition-transform duration-300"
+                >
+                  <g id="Frame 1">
+                    <g id="cross">
+                      <rect 
+                        id="vert" 
+                        x="62" 
+                        y="23" 
+                        width="47" 
+                        height="138" 
+                        className="fill-black dark:fill-white group-hover:fill-white" 
+                      />
+                      <rect 
+                        id="horiz" 
+                        x="17" 
+                        y="115" 
+                        width="47" 
+                        height="138" 
+                        transform="rotate(-90 17 115)" 
+                        className="fill-black dark:fill-white group-hover:fill-white" 
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <hr className="border-gray-500 dark:border-gray-700 my-3" />
+            <div className="text-sm mb-4 text-gray-600 dark:text-gray-400">
+              <DateFormatter dateString={date} />
+            </div>
+            <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+          </div>
         </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
-      </div>
+      </Link>
     </section>
   );
 }

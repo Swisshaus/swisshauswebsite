@@ -9,6 +9,10 @@
   @apply my-6;
 }
 
+.markdown ul li {
+  @apply mb-2;
+}
+
 .markdown h2 {
   @apply text-3xl mt-12 mb-4 leading-snug;
 }
@@ -22,8 +26,83 @@
   transition: all 0.2s ease-in-out;
 }
 
+.markdown .image-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 my-8;
+}
+
+.markdown .image-grid img {
+  @apply my-0 h-full w-full object-cover;
+  aspect-ratio: auto;
+}
+
 .markdown img:hover {
   opacity: 0.9;
   transform: scale(1.01);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.markdown .two-column-list {
+  column-count: 2;
+  column-gap: 2rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.markdown .two-column-list li {
+  break-inside: avoid;
+  margin-bottom: 0.75rem;
+}
+
+.markdown .two-column-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* General link styles */
+.markdown a {
+  color: #0070f3;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding-bottom: 2px;
+  display: inline-block;
+}
+
+/* Added class via JavaScript for more reliable selection */
+:global(.animated-link) {
+  color: #0070f3;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  padding-bottom: 2px;
+}
+
+:global(.animated-link)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #ef4444;
+  transition: width 0.3s ease;
+  z-index: 1;
+}
+
+:global(.animated-link):hover {
+  color: #ef4444;
+}
+
+:global(.animated-link):hover::after {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .markdown .two-column-list {
+    column-count: 1;
+  }
 }

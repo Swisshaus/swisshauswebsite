@@ -13,4 +13,5 @@ export type Post = {
   };
   content: string;
   preview?: boolean;
+  extension?: 'md' | 'mdx'; // Added for file type tracking
 };

@@ -4,33 +4,27 @@ import { Intro } from "@/app/components/intro";
 import { MoreStories } from "@/app/components/more-stories";
 import { getAllPosts } from "@/lib/api";
 import LandingPage from "@/app/components/LandingPage";
+import { StaticHeroSection } from "@/app/components/StaticHeroSection";
 
 export default function Index() {
   const allPosts = getAllPosts();
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
+  const morePosts = allPosts;
 
   return (
     <>
       <LandingPage 
         heroImage="/assets/blog/hello-world/cover.jpg"
-        title="Swisshaus Design & Build"
-        subtitle="Custom Home Builder in Kalispell, MT"
+        title="New Home for Sale"
+        subtitle="See photos and build progress"
       />
       
       <main className="mt-12">
+        {/* Hero post with styling matching more-stories */}
+        <StaticHeroSection />
+        
         <Container>
           <Intro />
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-            category={heroPost.category}
-          />
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 1 && <MoreStories posts={morePosts.slice(1)} />}
         </Container>
       </main>
     </>

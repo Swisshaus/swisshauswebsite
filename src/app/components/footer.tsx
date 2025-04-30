@@ -1,6 +1,5 @@
 'use client';
 import Container from "@/app/components/container";
-import { EXAMPLE_PATH } from "@/lib/constants";
 import Link from "next/link";
 import { useThemeContext } from "../contexts/ThemeContext";
 

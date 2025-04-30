@@ -23,7 +23,7 @@ export default function LandingPage({ heroImage, title, subtitle }: LandingPageP
         <h1 className="text-5xl font-bold mb-4">{title}</h1>
         <p className="text-xl mb-6">{subtitle}</p>
         <Link 
-          href="/about" 
+          href="/posts/pr7" 
           className="inline-block px-6 py-3 bg-red-600 text-white font-semibold hover:bg-red-700 transition-colors"
         >
           Learn More

@@ -10,12 +10,18 @@ export function getPostSlugs() {
 }
 
 export function getPostBySlug(slug: string) {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
+  const realSlug = slug.replace(/\.(md|mdx)$/, "");
+  // Try to find an MDX file first, fall back to MD
+  let fullPath = join(postsDirectory, `${realSlug}.mdx`);
+  if (!fs.existsSync(fullPath)) {
+    fullPath = join(postsDirectory, `${realSlug}.md`);
+  }
+  
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
+  const extension = fullPath.endsWith('.mdx') ? 'mdx' : 'md';
 
-  return { ...data, slug: realSlug, content } as Post;
+  return { ...data, slug: realSlug, content, extension } as Post & { extension: string };
 }
 
 export function getAllPosts(category?: string): Post[] {

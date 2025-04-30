@@ -91,7 +91,7 @@ export default function Contact() {
             </div>
           )}
           
-          {/* Contact Form */}
+          {/* Contact Form
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -104,6 +104,7 @@ export default function Contact() {
                   value={formState.firstName}
                   onChange={handleChange}
                   required
+                  aria-label="First Name"
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 />
               </div>
@@ -118,6 +119,7 @@ export default function Contact() {
                   value={formState.lastName}
                   onChange={handleChange}
                   required
+                  aria-label="Last Name"
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
                 />
               </div>
@@ -133,6 +135,7 @@ export default function Contact() {
                 value={formState.email}
                 onChange={handleChange}
                 required
+                aria-label="Email Address"
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
@@ -146,6 +149,7 @@ export default function Contact() {
                 id="phone"
                 value={formState.phone}
                 onChange={handleChange}
+                aria-label="Phone Number"
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
@@ -160,6 +164,7 @@ export default function Contact() {
                 value={formState.message}
                 onChange={handleChange}
                 required
+                aria-label="Message"
                 className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
               ></textarea>
             </div>
@@ -168,13 +173,15 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md transition-colors disabled:bg-gray-400"
+                aria-label="Submit Contact Form"
+                className="w-full bg-red-800 hover:bg-red-900 text-white font-medium py-3 px-6 rounded-md transition-colors disabled:bg-gray-400"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </div>
           </form>
-        </div>
+        */}
+        </div> 
       </div>
     </Container>
   );

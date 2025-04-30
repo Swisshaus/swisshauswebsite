@@ -14,8 +14,9 @@ import PostImageHandler from "./components/post-image-handler";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Swisshaus Design & Build ${CMS_NAME}`,
-  description: `Custom Home builder in Kalispell, MT ${CMS_NAME}.`,
+  title: `Swisshaus Design & Build | Custom Home Builder`,
+  description: `Custom Home builder specializing in high-end residential homes in Kalispell, MT and the Flathead Valley.`,
+  keywords: "custom home builder, Kalispell, Montana, Flathead Valley, construction, luxury homes, residential homes, swisshaus",
   icons: {
     icon: [
       { url: '/favicon/favicon.ico' },
@@ -32,8 +33,24 @@ export const metadata: Metadata = {
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
     siteName: 'Swisshaus Design & Build',
-    type: 'website'
+    type: 'website',
+    locale: 'en_US',
+    title: 'Swisshaus Design & Build | Custom Home Builder in Montana',
+    description: 'Custom Home builder specializing in high-end residential homes in Kalispell, MT and the Flathead Valley.'
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Swisshaus Design & Build',
+    description: 'Custom Home builder in Kalispell, MT and the Flathead Valley',
+    images: [HOME_OG_IMAGE_URL],
+  },
+  alternates: {
+    canonical: 'https://swisshaus.com',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({
@@ -64,6 +81,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#ff0000" />
         <meta name="msapplication-TileColor" content="#ff0000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body
         className={cn(inter.className, "dark:bg-dark-bg dark:text-dark-text")}
