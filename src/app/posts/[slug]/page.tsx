@@ -31,8 +31,9 @@ export default async function Post({
   // Add classes to links to make styling more consistent
   content = content.replace(/<a /g, '<a class="animated-link" ');
 
-  const isHomeComplete = post.category === "Home-Complete";
-  const isForSale = post.category === "For-Sale";
+  const category = post.category || "General";
+  const isHomeComplete = category === "Home-Complete";
+  const isForSale = category === "For-Sale";
 
   return (
     <main>
@@ -45,7 +46,7 @@ export default async function Post({
               coverImage={post.coverImage}
               date={post.date}
               author={post.author}
-              category={post.category}
+              category={category}
               content={content}
               isMdx={isMdx}
             />
@@ -55,7 +56,7 @@ export default async function Post({
               coverImage={post.coverImage}
               date={post.date}
               author={post.author}
-              category={post.category}
+              category={category}
               content={content}
               isMdx={isMdx}
             />
@@ -66,7 +67,7 @@ export default async function Post({
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
-                category={post.category}
+                category={category}
               />
               <PostBody content={content} isMdx={isMdx} />
             </>

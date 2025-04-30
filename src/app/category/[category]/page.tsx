@@ -32,7 +32,7 @@ export default async function CategoryPage({
           author={heroPost.author}
           slug={heroPost.slug}
           excerpt={heroPost.excerpt}
-          category={heroPost.category}
+          category={heroPost.category || "General"}
         />
       )}
       {morePosts.length > 0 && <CategoryStories posts={morePosts} />}

@@ -29,7 +29,7 @@ export function getAllPosts(category?: string): Post[] {
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
     // Filter by category if specified
-    .filter((post) => !category || post.category === category)
+    .filter((post) => !category || (post.category || "General") === category)
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
