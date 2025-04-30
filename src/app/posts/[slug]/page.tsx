@@ -10,13 +10,11 @@ import HomeCompleteLayout from "@/app/components/home-complete-layout";
 import ForSaleLayout from "@/app/components/for-sale-layout";
 import { Metadata } from "next";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-export default async function Post({ params }: Props) {
+export default async function Post({ 
+  params,
+}: { 
+  params: { slug: string } 
+}) {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -78,7 +76,11 @@ export default async function Post({ params }: Props) {
   );
 }
 
-export function generateMetadata({ params }: Props): Metadata {
+export function generateMetadata({ 
+  params,
+}: { 
+  params: { slug: string } 
+}): Metadata {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
