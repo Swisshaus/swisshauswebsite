@@ -12,7 +12,7 @@ ogImage:
 ---
 ## Property Highlights
 
-* **Address:** <a href="https://www.google.com/maps/place/Porter+Rnch+Rd,+Montana+59901/@48.117061,-114.2034646,827m/data=!3m2!1e3!4b1!4m6!3m5!1s0x536652ff4fda7c9f:0x861adbabb2e9e8fc!8m2!3d48.117061!4d-114.2008843!16s%2Fg%2F11w3y0d55v?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">164 Porter Ranch Rd., Kalispell MT 59901</a>
+* **Address:** [164 Porter Ranch Rd., Kalispell MT 59901](https://www.google.com/maps/place/Porter+Rnch+Rd,+Montana+59901/@48.117061,-114.2034646,827m/data=!3m2!1e3!4b1!4m6!3m5!1s0x536652ff4fda7c9f:0x861adbabb2e9e8fc!8m2!3d48.117061!4d-114.2008843!16s%2Fg%2F11w3y0d55v?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D)
 * **Neighborhood:** [Porter Ranch Reserve](/posts/porterranch.md)
 * **Location:** Kalispell, Lower Valley, Flathead County, Montana
 * **Square Footage:** 3,489 ft²

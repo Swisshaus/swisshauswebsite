@@ -30,6 +30,9 @@ export default async function Post({
   
   // Add classes to links to make styling more consistent
   content = content.replace(/<a /g, '<a class="animated-link" ');
+  
+  // Make external links open in a new tab
+  content = content.replace(/<a class="animated-link" href="http/g, '<a class="animated-link" target="_blank" rel="noopener noreferrer" href="http');
 
   const category = post.category || "General";
   const isHomeComplete = category === "Home-Complete";
