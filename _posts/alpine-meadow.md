@@ -1,5 +1,5 @@
 ---
-title: "Alpine Ranch"
+title: "Alpine Meadow"
 excerpt: "The home blends traditional alpine elements—like the pitched roof, wood accents, and stone fireplace—with modern features such as expansive windows, open floor plans, and minimalist interiors. The use of natural materials (wood, stone) ties it to its environment, while the clean lines and neutral tones give it a contemporary edge."
 coverImage: "/assets/blog/preview/cover.jpeg"
 date: "2023-03-16T05:35:07.322Z"
@@ -10,7 +10,8 @@ author:
 ogImage:
   url: "/assets/blog/preview/cover.jpeg"
 ---
-## 3,400 Sq Ft Alpine Modern
+* **Location:** Whitefish, Flathead County, Montana
+
 The home blends traditional alpine elements—like the pitched roof, wood accents, and stone fireplace—with modern features such as expansive windows, open floor plans, and minimalist interiors. The use of natural materials (wood, stone) ties it to its environment, while the clean lines and neutral tones give it a contemporary edge.
 
 ![Whitefish Custom Home Front of House Closeup](/assets/blog/preview/alpine32.png)

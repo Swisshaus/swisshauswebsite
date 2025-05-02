@@ -20,7 +20,7 @@ export default function Index() {
         
         <Container>
           <Intro />
-          {morePosts.length > 1 && <MoreStories posts={morePosts.slice(1)} />}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </main>
     </>

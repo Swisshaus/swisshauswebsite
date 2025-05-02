@@ -28,8 +28,13 @@ export function getAllPosts(category?: string): Post[] {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
-    // Filter by category if specified
-    .filter((post) => !category || (post.category || "General") === category)
+    // Filter out Draft posts and filter by category if specified
+    .filter((post) => 
+      // Exclude posts with 'Draft' category
+      (post.category || "General") !== "Draft" && 
+      // Filter by specific category if provided
+      (!category || (post.category || "General") === category)
+    )
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;

@@ -76,11 +76,12 @@ export default function Contact() {
         <div className="w-full max-w-2xl">
                  <div className="grid md:grid-cols-2"> 
                   <p className="font-bold text-lg text-center mb-12">
-                      Phone: 406-407-5072 </p>
-                    <p className="font-bold text-lg text-center mb-12">
-                      Email: Office@swisshaus.com
-                    </p>
-                    </div>
+                      Phone: <a href="tel:+14064075072" className="text-red-600 hover:underline">406-407-5072</a>
+                  </p>
+                  <p className="font-bold text-lg text-center mb-12">
+                      Email: <a href="mailto:Office@swisshaus.com" className="text-red-600 hover:underline">Office@swisshaus.com</a>
+                  </p>
+                 </div>
                     <p className="text-lg text-center mb-12">
                       We'd love to hear about your project. Please give us a call or fill out the form below and we'll be in touch soon.
                     </p>
