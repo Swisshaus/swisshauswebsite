@@ -27,9 +27,9 @@ const defaultSlides: SlideData[] = [
   },
   {
     image: '/assets/blog/Lidstrom/AlpineB.JPG',
-    title: 'Alpine Ranch',
+    title: 'Alpine Meadow',
     subtitle: 'View some of our recent homes',
-    link: '/posts/alpine-ranch',
+    link: '/posts/alpine-meadow',
     linkText: 'See Project'
   },
   {
