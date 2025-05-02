@@ -20,7 +20,6 @@ ogImage:
 * **Layout:** 4 Bedrooms, 3.5 Bathrooms, 3-Car Garage
 * **Estimated Completion:** December 2025
 
-![Porter Ranch 7 Sketch 1](/assets/blog/pr7/sketch.jpeg)
 ![Lot 7 Exploded View of Floorplan](/assets/blog/pr7/ExplodedElevation.gif)
 ## Property Overview
 
@@ -57,4 +56,5 @@ Construction began in April 2025 with an estimated move-in ready date of Novembe
 ---
 ![Porter Ranch 7 Living Room Render](/assets/blog/pr7/LivingRoomRender.jpg)
 ![Porter Ranch 7 Kitchen Render](/assets/blog/pr7/KitchenRender.jpg)
+![Porter Ranch 7 Sketch 1](/assets/blog/pr7/sketch.jpeg)
 ![Porter Ranch 7 Sketch 2](/assets/blog/pr7/sketch2.JPG)

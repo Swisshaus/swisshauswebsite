@@ -2,7 +2,7 @@
 title: "Sonoran Desert Reserve"
 excerpt: "A boutique gated community in Tucson, AZ inspired by native architecture and built to our exceptional custom home standards."
 coverImage: "/assets/blog/SDR/sdr1.jpeg"
-date: "2024-02-15T05:35:07.322Z"
+date: "2019-02-15T05:35:07.322Z"
 category: "Neighborhood Development"
 author:
   name: Kevin Arnold

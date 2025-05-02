@@ -18,7 +18,7 @@ export default function Projects() {
     <Container>
       <div className="py-28">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center">
-          Our Projects
+          Some Recent Projects
         </h1>
         <div className="border-b-2 w-24 mx-auto mb-16 border-red-600"></div>
         

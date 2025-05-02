@@ -2,7 +2,7 @@
 title: "Bigfork Timber Frame Barndominium"
 excerpt: "A custom fully timber framed shop with the design forethought to allow the back third, and second story to be easily renovated into a 3 bed Barndominium."
 coverImage: "/assets/blog/bigfork-timberframe/timberframe1.jpg"
-date: "2023-01-11T05:35:07.322Z"
+date: "2022-01-11T05:35:07.322Z"
 category: "New Construction"
 author:
   name: Kevin Arnold

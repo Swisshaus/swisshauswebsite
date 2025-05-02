@@ -12,11 +12,7 @@ export default function Index() {
 
   return (
     <>
-      <LandingPage 
-        heroImage="/assets/blog/hello-world/cover.jpg"
-        title="New Home for Sale"
-        subtitle="See photos and build progress"
-      />
+      <LandingPage />
       
       <main className="mt-12">
         {/* Hero post with styling matching more-stories */}

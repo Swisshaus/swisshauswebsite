@@ -2,7 +2,7 @@
 title: "Alpine Ranch"
 excerpt: "The home blends traditional alpine elements—like the pitched roof, wood accents, and stone fireplace—with modern features such as expansive windows, open floor plans, and minimalist interiors. The use of natural materials (wood, stone) ties it to its environment, while the clean lines and neutral tones give it a contemporary edge."
 coverImage: "/assets/blog/preview/cover.jpeg"
-date: "2022-03-16T05:35:07.322Z"
+date: "2023-03-16T05:35:07.322Z"
 category: "Home-Complete"
 author:
   name: Kevin Arnold

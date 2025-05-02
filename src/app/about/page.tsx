@@ -114,9 +114,9 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold mb-2">Kevin Arnold</h3>
               <p className="text-gray-600 dark:text-dark-text/80 mb-4">Project Management & Designer</p>
-              <p className="text-center">
-                With over 15 years of architectural experience, Kevin heads our design team, transforming client visions into stunning, functional home designs. His attention to detail and innovative approach have earned Swisshaus multiple design awards.
-              </p>
+              {/* <p className="text-center">
+                Kevin heads our design team, transforming client visions into stunning, functional home designs. His attention to detail and innovative approach have helped
+              </p> */}
             </div>
             
             {/* Mike Profile */}
@@ -131,9 +131,9 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold mb-2">Mike Arnold</h3>
               <p className="text-gray-600 dark:text-dark-text/80 mb-4">Founder & Master Builder</p>
-              <p className="text-center">
+              {/* <p className="text-center">
                 Mike brings technical expertise and hands-on building experience to every Swisshaus project. His commitment to quality construction and 'No Corners Cut' building practices ensures that each home we build is as durable as it is beautiful.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

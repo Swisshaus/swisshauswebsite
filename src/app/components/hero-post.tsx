@@ -13,6 +13,8 @@ type Props = {
   author: Author;
   slug: string;
   category?: string;
+  customHeading?: string;
+  customDescription?: string;
 };
 
 export function HeroPost({
@@ -23,17 +25,24 @@ export function HeroPost({
   author,
   slug,
   category = "General",
+  customHeading = "Some of our past projects",
+  customDescription,
 }: Props) {
   return (
-    <section className="max-w-[1200px] mx-auto px-5">
-      <h2 className="mb-8 text-5xl md:text-2xl font-bold tracking-tighter leading-tight">
-        Some of our past projects
+    <section>
+      <h2 className="mb-4 text-5xl md:text-2xl font-bold tracking-tighter leading-tight">
+        {customHeading}
         <hr className="border-gray-500 dark:border-gray-700 my-3" />
       </h2>
+      {customDescription && (
+        <p className="mb-8 tracking-tighter leading-tight">
+          {customDescription}
+        </p>
+      )}
       
       <Link href={`/posts/${slug}`} className="block group">
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:shadow-lg group-hover:-translate-y-1 mb-8">
-          <div className="h-[60vh] relative overflow-hidden">
+          <div className="h-[400px] md:h-[450px] relative overflow-hidden">
             <Image
               src={coverImage}
               alt={`Cover Image for ${title}`}
