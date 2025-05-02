@@ -11,6 +11,10 @@ ogImage:
   url: "/assets/blog/porterranch/PRR1.jpg"
 ---
 
-## Porter Ranch Reserver
+5 acre lots
 
-More information to come soon.. check back in the next few days
+6 available for your Custom Home build through Swisshaus
+
+[Lot 7 Under Construction and FOR SALE](/posts/pr7)
+
+*More information about our newest small neighborhood will be on this page within the next few days, please check back soon. (May 2, 2025)*
