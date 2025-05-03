@@ -22,7 +22,7 @@ export default async function CategoryPage({
     switch(category) {
       case "Home-Complete":
         return {
-          heading: "Our completed residential projects",
+          heading: "Some of our completed residential projects",
           description: "Explore our portfolio of finished custom homes, each crafted with exceptional attention to detail and quality craftsmanship."
         };
       case "For-Sale":

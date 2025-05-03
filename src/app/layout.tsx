@@ -80,6 +80,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <meta name="theme-color" content="#ff0000" />
         <meta name="msapplication-TileColor" content="#ff0000" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
