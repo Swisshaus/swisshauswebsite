@@ -2,7 +2,7 @@
 title: "Hammer Residence"
 excerpt: "This large custom home is the king of the hill it was built on. The home has 360 degree views as well as a expansive interior. The front and back yard really set this home apart for us. The landscaping is so meticulously designed it feels like a resort. A timeless home. Incredible wood beams in the great room. "
 coverImage: "/assets/blog/dynamic-routing/cover.jpg"
-date: "2005-03-16T05:35:07.322Z"
+date: "2007-03-16T05:35:07.322Z"
 category: "Home-Complete"
 author:
   name: Mike Arnold

@@ -21,6 +21,7 @@ ogImage:
 * **Estimated Completion:** December 2025
 
 ![Lot 7 Exploded View of Floorplan](/assets/blog/pr7/ExplodedElevation.gif)
+![Kalispell New Custom Home](/assets/blog/pr7/Foundation.JPG)
 ## Property Overview
 
 This custom home is situated on a beautiful 5-acre lot in the [Porter Ranch Reserve](/posts/porterranch.md). Featuring modern design with timeless craftsmanship, this 4-bedroom, 3.5-bathroom residence offers panoramic mountain views and luxurious living spaces.
@@ -36,6 +37,7 @@ Construction began in April 2025 with an estimated move-in ready date of Novembe
 - Chef's kitchen with high-end appliances
 - Oversized Pantry with wet bar
 - Master suite with luxury bath and large walk-in closet
+- Private Well
 - Energy-efficient construction and systems
 - ERV Fresh Air - Filtered and Temperature / Humidity Controlled
 - Panoramic mountain views from multiple rooms

@@ -50,6 +50,18 @@ export default async function markdownToHtml(markdown: string) {
       '<div class="image-grid">$1</div>'
     );
     
+    // Preserve iframe tags that might get wrapped in paragraph tags
+    htmlContent = htmlContent.replace(
+      /<p>(<iframe[^>]*>.*?<\/iframe>)<\/p>/gs,
+      '$1'
+    );
+    
+    // Process Google Maps markers
+    htmlContent = htmlContent.replace(
+      /<p>\[GOOGLE_MAP: (https:\/\/www\.google\.com\/maps\/embed[^\]]+)\]<\/p>/g,
+      '<div data-google-map="true" data-map-src="$1"></div>'
+    );
+    
     return htmlContent;
   } catch (error) {
     console.error('Error processing markdown:', error);
