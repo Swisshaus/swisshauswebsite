@@ -26,6 +26,7 @@ Sonoran Desert Reserve is a testament to our commitment to quality craftsmanship
 
 A boutique community in every sense, Sonoran Desert Reserve was conceived with a single vision: to develop a neighborhood of homes focused on exceptional quality rather than quantity. Each residence is meticulously designed and constructed to the same exacting standards we apply to our custom homes.
 
+![Example Kitchen Design](/assets/blog/SDR/sdr8.jpg)
 ![Community Streetscape](/assets/blog/SDR/sdr2.jpeg)
 ![Home Exterior Detail](/assets/blog/SDR/sdr3.jpeg)
 

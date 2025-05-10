@@ -19,23 +19,23 @@ type LandingPageProps = {
 
 const defaultSlides: SlideData[] = [
   {
-    image: '/assets/blog/pr7/FooterDrone1.JPG',
-    title: 'New Home for Sale',
+    image: '/assets/blog/pr7/Foundation.JPG',
+    title: 'New Custom Home for Sale in Kalispell',
     subtitle: 'See photos and build progress',
     link: '/posts/pr7',
     linkText: 'Learn More'
   },
   {
     image: '/assets/blog/Lidstrom/AlpineB.JPG',
-    title: 'Alpine Meadow',
-    subtitle: 'View some of our recent homes',
+    title: 'Whitefish Custom Home Contractor',
+    subtitle: 'View some of our recent home builds',
     link: '/posts/alpine-meadow',
     linkText: 'See Project'
   },
   {
     image: '/assets/blog/porterranch/PRR1.jpg',
     title: 'Porter Ranch Reserve',
-    subtitle: 'New neighborhood in Lower Valley, 7 lots available',
+    subtitle: 'New Custom Home Neighborhood in Lower Valley',
     link: '/posts/porterranch',
     linkText: 'View Project'
   }
